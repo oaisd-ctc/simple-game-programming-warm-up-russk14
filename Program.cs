@@ -43,6 +43,19 @@ public class Program
             Console.WriteLine();
         }
 
+        GameEnd(wins, losses);
+    }
+
+    public static void Intro()
+    {
+        Console.WriteLine("In this game you and a computer rival will play 10 rounds\nwhere you will each roll a 6-sided dice, and the player\nwith the highest dice value will win the round. The player\nwho wins the most rounds wins the game. Good luck!");
+        Console.WriteLine();
+        Console.WriteLine("Press any key to start...");
+        Console.ReadKey();
+        Console.WriteLine();
+    }
+
+    public static void GameEnd(int wins, int losses){
         Console.WriteLine("Game over.");
         Console.WriteLine($"The score is now - You: {wins}. Rival : {losses}.");
         if (wins > losses){
@@ -54,16 +67,6 @@ public class Program
         }
         Console.WriteLine("Press any key to exit...");
         Console.ReadKey();
-
-    }
-
-    public static void Intro()
-    {
-        Console.WriteLine("In this game you and a computer rival will play 10 rounds\nwhere you will each roll a 6-sided dice, and the player\nwith the highest dice value will win the round. The player\nwho wins the most rounds wins the game. Good luck!");
-        Console.WriteLine();
-        Console.WriteLine("Press any key to start...");
-        Console.ReadKey();
-        Console.WriteLine();
     }
 
     public static int Rng()
